@@ -1,0 +1,84 @@
+#mainNav{
+    position: sticky;
+    top: 0;
+}
+
+#mainNav ul{
+    list-style-type: none;
+    padding: 0;
+    margin : 10;
+    display: flex;
+    background-color: #5fa778;
+    flex-flow: row wrap;
+}
+
+#mainNav li{
+    flex-grow: 1;
+    width: calc(25% - .2em);
+    border: .1em rgb(17, 17, 17) solid;
+}
+
+#mainNav li:hover{
+    background-color: #5c926f;
+}
+
+#mainNav a{
+    background-size: 40px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    color: rgb(17, 17, 17);
+    text-decoration: none;
+}
+
+#mainNav li:nth-of-type(1) a{
+    background-image: url(../appimages/lion.svg);
+    margin-left: 25px;
+}
+
+#mainNav li:nth-of-type(2) a{
+    background-image: url(../appimages/activity.svg);
+    margin-left: 25px;
+}
+
+#mainNav li:nth-of-type(3) a{
+    background-image: url(../appimages/purchase.svg);
+    margin-left: 25px;
+}
+
+#mainNav li:nth-of-type(4) a{
+    background-image: url(../appimages/about.svg);
+    margin-left: 25px;
+}
+
+.navText{
+    position: absolute;
+    top: -1200px;
+}
+
+@media only screen and (min-width: 800px){
+
+    #mainNav a{
+        background-position: 5px center;
+        display: block;
+    }
+
+    #mainNav ul{
+        justify-content: flex-end;
+    }
+
+    #mainNav li{
+        width: 100px;
+        flex-grow: 0;
+    }
+
+    #navText{
+        display: inline;
+        text-align: left;
+        padding-left: 53px;
+        padding-top: 0;
+    }
+}

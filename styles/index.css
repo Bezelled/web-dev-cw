@@ -1,0 +1,41 @@
+h1{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 3.4em;
+    text-align: center;
+    background-image: url("/appimages/SLemblem.svg");
+}
+
+h2{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0.5 em 0;
+}
+section, p, li{
+    font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+}
+
+.header img {
+    float: left;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    left: 2%;
+    top: 3%;
+}
+  
+.header h1 {
+    position: relative;
+    top: 5px;
+}
+
+#footNav{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.2em;
+    color:lightpink;
+    list-style-type: none;
+    display: flex;
+    background-color: #5fa778;
+}
+
+#footNav li{
+    flex-grow: 1;
+}
