@@ -6,7 +6,6 @@
 #mainNav ul{
     list-style-type: none;
     padding: 0;
-    margin : 10;
     display: flex;
     background-color: #5fa778;
     flex-flow: row wrap;
@@ -59,6 +58,40 @@
     top: -1200px;
 }
 
+/*For mobiles and tabs*/
+@media only screen and (max-width: 799px){
+
+    #header h1{
+        font-size: 0.7em;
+    }
+
+    h1{
+        font-size: 0.7em;
+    }
+
+    #mainNav a{
+        background-position: 5px center;
+        display: block;
+    }
+
+    #mainNav ul{
+        justify-content: flex-end;
+    }
+
+    #mainNav li{
+        width: 100px;
+        flex-grow: 0;
+    }
+
+    #navText{
+        display: inline;
+        text-align: left;
+        padding-left: 53px;
+        padding-top: 0;
+    }
+}
+
+/*For desktops*/
 @media only screen and (min-width: 800px){
 
     #mainNav a{
