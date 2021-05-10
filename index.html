@@ -3,9 +3,11 @@
 
     <head>
         <meta charset="utf-8">
+        <!--Since we are making a mobile-first app, it's important to specify this viewport-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="The Dehiwala Zoo">
         <title>The Dehiwala Zoological Garden</title>
+        <!--Favicon from https://www.pinterest.com/ and HTML code from https://realfavicongenerator.net/-->
         <link rel="manifest" href="manifest.json">
         <link rel="apple-touch-icon" sizes="180x180" href="appimages/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="appimages/favicon-32x32.png">
@@ -18,19 +20,27 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/shared.css">
         <link rel="stylesheet" href="styles/index.css">
+        <!--Normalize and shared.css are common for all web pages :
+            normalize contains CSS code to structure the page properly for any user agent | https://necolas.github.io/normalize.css/
+            share contains CSS code that is common throughout the web application (mostly nav bar and footer)
+        -->
     </head>
 
     <body>
+        <!--Wrapping the header and emblem in a div tag will make it easier for us to edit it and make adjustments-->
         <div class="header">
-            <img src="appimages/SL_emblem.png" alt="National emblem of SL">
+            <img src="appimages/SL_emblem.png" alt="National emblem of SL"> <!--Sourced from https://en.wikipedia.org/wiki/Emblem_of_Sri_Lanka-->
             <h1>The National Zoological Gardens of Sri Lanka</h1>
         </div>
+        <!--Using a 6 (even) element nav bar will make it possible to distribute the elements and make it easier to look cleaner-->
         <nav id="mainNav">
             <ul>
             <li><a href="index.html"></a><span class="navText">Home</span></li>
+            <li><a href="wildlife.html"></a><span class="navText">Wildlife</span></li>
             <li><a href="activities.html"></a><span class="navText">Activities</span></li>
             <li><a href="purchases.html"></a><span class="navText">Purchases</span></li>
             <li><a href="aboutus.html"></a><span class="navText">About Us</span></li>
+            <li><a href="contactus.html"></a><span class="navText">Contact Us</span></li>
             </ul>
         </nav>
         <main>
@@ -70,6 +80,7 @@
             <footer>
                 <nav id="footNav">
                     By using our website, you are hereby abiding by our :
+                    <!--Link the Privacy Policy and User Agreement anchor tags to any legally-binding document-->
                     <ul>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">User Agreement</a></li>
