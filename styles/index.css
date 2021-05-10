@@ -27,6 +27,11 @@ section, p, li{
     top: 5px;
 }
 
+.mainPic{
+    max-width: 100%;
+    height: auto; /*To make the image responsive*/
+}
+
 #footNav{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-size: 1.2em;
