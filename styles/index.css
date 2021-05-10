@@ -1,139 +1,47 @@
-#mainNav{
-    position: sticky;
-    top: 0;
+h1{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 3.4em;
+    text-align: center;
 }
 
-#mainNav ul{
+h2{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0.5em 0;
+}
+
+section, p, li{
+    font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+}
+
+.header img {
+    float: left;
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    left: 2%;
+    top: 3%;
+}
+  
+.header h1 {
+    position: relative;
+    top: 5px;
+}
+
+#mainPic{
+    max-width: 100%;
+    height: auto; /*To make the image responsive*/
+    object-fit: contain;    /*To make it retain its aspect ratio but fit the screen*/
+}
+
+#footNav{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.2em;
+    color:lightpink;
     list-style-type: none;
-    padding: 0;
     display: flex;
     background-color: #5fa778;
-    flex-flow: row wrap;
 }
 
-#mainNav li{
+#footNav li{
     flex-grow: 1;
-    width: calc(25% - .2em);
-    border: .1em rgb(17, 17, 17) solid;
-}
-
-#mainNav li:hover{
-    background-color: #5c926f;
-}
-
-#mainNav a{
-    background-size: 40px auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 50px;
-    line-height: 50px;
-    text-decoration: none;
-    display: block;
-    color: rgb(17, 17, 17);
-    text-decoration: none;
-}
-
-/*All svg images were sourced from freesvg.org*/
-
-#mainNav li:nth-of-type(1) a{
-    background-image: url(../appimages/lion.svg);
-    margin-left: 25px;
-}
-
-#mainNav li:nth-of-type(2) a{
-    background-image: url(../appimages/butterfly.svg);
-    margin-left: 25px;
-}
-
-#mainNav li:nth-of-type(3) a{
-    background-image: url(../appimages/activity.svg);
-    margin-left: 25px;
-}
-
-#mainNav li:nth-of-type(4) a{
-    background-image: url(../appimages/purchase.svg);
-    margin-left: 25px;
-}
-
-#mainNav li:nth-of-type(5) a{
-    background-image: url(../appimages/about.svg);
-    margin-left: 25px;
-}
-
-#mainNav li:nth-of-type(6) a{
-    background-image: url(../appimages/contactus.svg);
-    margin-left: 25px;
-}
-
-.navText{
-    position: absolute;
-    top: -1200px;
-}
-
-body {
-    background-color: seashell; /*to set the background colour of the page*/
-}
-
-/*For mobiles and tabs*/
-@media only screen and (max-width: 799px){
-
-    #header h1{
-        font-size: 0.7em;
-    }
-
-    h1{
-        font-size: 0.7em;
-    }
-
-    #mainNav a{
-        background-position: 5px center;
-        display: block;
-    }
-
-    #mainNav ul{
-        justify-content: flex-end;
-    }
-
-    /*Makes the nav bar scalable and fit the screen for mobile devices*/
-    #mainNav li{
-        width: 100px;
-        flex-grow: 1;
-    }
-
-    #mainNav li a{
-        background-size:50px;
-        align-self: center;
-    }
-
-    #navText{
-        display: inline;
-        text-align: left;
-        padding-left: 53px;
-        padding-top: 0;
-    }
-}
-
-/*For desktops*/
-@media only screen and (min-width: 800px){
-
-    #mainNav a{
-        background-position: 5px center;
-        display: block;
-    }
-
-    #mainNav ul{
-        justify-content: flex-end;
-    }
-
-    #mainNav li{
-        width: 100px;
-        flex-grow: 0;
-    }
-
-    #navText{
-        display: inline;
-        text-align: left;
-        padding-left: 53px;
-        padding-top: 0;
-    }
 }
