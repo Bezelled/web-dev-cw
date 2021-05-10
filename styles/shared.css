@@ -58,6 +58,10 @@
     top: -1200px;
 }
 
+body {
+    background-color: seashell; /*to set the background colour of the page*/
+}
+
 /*For mobiles and tabs*/
 @media only screen and (max-width: 799px){
 
@@ -78,9 +82,15 @@
         justify-content: flex-end;
     }
 
+    /*Makes the nav bar scalable and fit the screen for mobile devices*/
     #mainNav li{
         width: 100px;
-        flex-grow: 0;
+        flex-grow: 1;
+    }
+
+    #mainNav li a{
+        background-size:50px;
+        align-self: center;
     }
 
     #navText{
