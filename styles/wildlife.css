@@ -1,1 +1,65 @@
+img{
+    height: 100%;
+    width:100%;
+    object-fit: contain;
+    margin:0;
+    padding: 0;
+}
 
+.fauna{
+    border: 3px solid #16721b;
+    padding: 20px 40px 40px;
+    max-width: 640px;
+}
+
+.fauna pic{
+    display: inline-block;
+    vertical-align: top;
+    width: 46%;
+    margin: 20px 30px 0 0;
+}
+
+.fauna text {
+      display: inline-block;
+      width: 46%;
+}
+
+/*For our anchor links*/
+
+a:link{
+    color: rgb(173, 108, 42);
+}
+
+a:visited{
+    color:#0A4B5F;
+}
+
+/*Our background image*/
+
+body {
+    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/wildlife_bg.png");
+    background-position: center center;
+    /*Attaches our image to our viewport at all times*/
+    background-attachment: fixed;
+    /*Won't repeat the image multiple times*/
+    background-repeat: no-repeat;
+    /*To cover the whole page*/
+    background-size: cover;
+    /*In the rare occasion that the b/g image does not load, we can use a simple colour*/
+    background-color: #DFACC4;
+   }
+
+@media only screen and (min-width: 800px){
+    
+    .fauna text{
+        width: 100%;
+    }
+
+    body{
+        background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/wildlife_bg.svg");
+    }
+
+    a:hover{
+        color: rgb(155, 82, 9);
+    }
+}
