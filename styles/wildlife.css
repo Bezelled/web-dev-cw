@@ -114,4 +114,7 @@ h2, thead{
     .name{
         font-weight: bold;
     }
+    
+    tfoot{
+        display: block;
 }
