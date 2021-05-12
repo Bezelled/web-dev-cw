@@ -14,7 +14,8 @@
 
 #mainNav li{
     flex-grow: 1;
-    width: calc(25% - .2em);
+    /*width: calc(25% - .2em);*/
+    width: 30%;
     border: thin rgb(17, 17, 17) solid;
 }
 
