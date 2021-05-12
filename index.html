@@ -28,26 +28,27 @@
 
     <body>
         <!--Wrapping the header and emblem in a div tag will make it easier for us to edit it and make adjustments-->
-        <div class="header">
-            <img src="appimages/SL_emblem.png" alt="National emblem of SL"> <!--Sourced from https://en.wikipedia.org/wiki/Emblem_of_Sri_Lanka-->
-            <h1>The National Zoological Gardens of Sri Lanka</h1>
-        </div>
+        <header>
+            <img src="appimages/SL_emblem.png" alt="National emblem of SL" id="headerImg"> <!--Sourced from https://en.wikipedia.org/wiki/Emblem_of_Sri_Lanka-->
+            <h1>The Dehiwala Zoo : Home</h1>
+        </header>
         <!--Using a 6 (even) element nav bar will make it possible to distribute the elements and make it easier to look cleaner-->
         <nav id="mainNav">
             <ul>
-            <li><a href="index.html"></a><span class="navText">Home</span></li>
-            <li><a href="wildlife.html"></a><span class="navText">Wildlife</span></li>
-            <li><a href="activities.html"></a><span class="navText">Activities</span></li>
-            <li><a href="purchases.html"></a><span class="navText">Purchases</span></li>
-            <li><a href="aboutus.html"></a><span class="navText">About Us</span></li>
-            <li><a href="contactus.html"></a><span class="navText">Contact Us</span></li>
+                <li><a href="index.html"></a><span class="navText">Home</span></li>
+                <li><a href="wildlife.html"></a><span class="navText">Wildlife</span></li>
+                <li><a href="activities.html"></a><span class="navText">Activities</span></li>
+                <li><a href="purchases.html"></a><span class="navText">Purchases</span></li>
+                <li><a href="aboutus.html"></a><span class="navText">About Us</span></li>
+                <li><a href="contactus.html"></a><span class="navText">Contact Us</span></li>
             </ul>
         </nav>
+        <img src="appimages/elephant.jpg" alt="Our main elephant Raja" id="mainPic"> <!--Sourced from shutterstock.com-->
         <main>
-            <img src="appimages/elephant.jpg" alt="Our main elephant Raja" id="mainPic"> <!--Sourced from shutterstock.com-->
             <div class="mainPoints">
                 <p>
-                The Dehiwala Zoo is widely regarded as the main tourist attraction in Sri Lanka for flora and fauna.<br>It's definitely a must to visit <b>at least</b> once!
+                The Dehiwala Zoo is widely regarded as the main tourist attraction in Sri Lanka for flora and fauna.<br>
+                It's definitely a must to visit <b>at least</b> once!
                 </p>
                 <p>
                     Various animals are showcased inside exhibits and artificial enclosures, tailored to suit their respective needs and provide a comfortable, safe space for these creatures to thrive in.
@@ -57,34 +58,88 @@
                 </p>
             </div>
         </main>
-            <section>
-                <h2><u>Popular exhibits</u></h2>
-                <ol>
-                    <li>The elephant circus</li>
-                    <li>The walk-through aviary</li>
-                    <li>The reptile house</li>
-                    <li>The aquarium</li>
-                </ol>
-                and many more!
-            </section>
-            <section>
-                <h2><u>Ecological Importance</u></h2>
-                The Zoo is constantly contributing to advances in the field of wildlife, medicine and agriculture.<br>Not limited to just to exhibiting exotic wildlife, the zoo is a pinnacle of Sri Lankan wildlife preservation :
-                <ul>
-                    <li>It has an Education Centre, where (upon prior notice) professionals teach students and visitors on various activities and the importance of its inhabitants.</li>
-                    <li>Its Research Centre has contributed over 45 new findings to the National Department of Wildlife in the past 5 years alone.</li>
-                    <li>Was noted at the UN Summit of 2019 for being a highly advanced wildlife centre with several major advancements that aided foreign scientists.</li>
-                    <li>Contains many <a href="https://en.wikipedia.org/wiki/Extinct_in_the_wild#:~:text=A%20species%20that%20is%20extinct,due%20to%20massive%20habitat%20loss.">extinct-in-the-wild</a> flora and fauna that prove to be the last remaining members of their species.<br>Attempts are being made to try and breed or preserve these great species for longer.</li>
-                </ul>
-            </section>
+        <hr>
+
+        <!------------------->
+
+        <!--We're going to wrap each element in a div tag
+            so it's easier for us to group them together
+            and edit them all at once
+
+        --All of them shall share the same class,
+            so that we can edit one ==> edit all        -->
+
+        <section>
+            <div class="part">
+                <h2 class="part-title">About the Zoo</h2>
+                <!--Sourced from http://mirrorcitizen.dailymirror.lk/2018/10/02/childrens-zoo-day-at-dehiwela/-->
+                <div class="part-img"><img src="appimages/entrance.jpg" alt="Our zoo entrance!"></div>
+                <!--Cited from nationalzoo.gov.lk/zoo/-->
+                <div class="part-content">
+                    <p>The Dehiwala National Zoo, which has a remarkable collection of exotic and indigenous fauna, is one of the oldest Zoos in Asia. The Zoo in Sri Lanka is widely known as Colombo Zoo all over the world.<br><br>
+            
+                        Annually, over one and half million local and foreign tourists visit the Zoo. And over 2000 students and groups of students from schools and universities visit the Zoo for educational purposes.<br><br>
+            
+                        The Zoo is trying to keep the pace with the changing world. It has been involved in some major redevelopment programmes with the aim of enhancing the overall image of the Zoo while providing maximum facilities for animals and the visitors.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="part">
+                <h2 class="part-title">About our wildlife</h2>
+                <div class="part-img"><img src="appimages/zebra.jpg" alt="Our zebra Marty!"></div>
+                <!--Sourced from nationalzoo.gov.lk/zoo/-->
+                <div class="part-content">
+                    <p>Currently, the Dehiwala Zoo houses :</p>
+                        <ul>
+                            <li>72 species of mammals</li>
+                            <li>65 species of birds</li>
+                            <li>31 species of reptiles</li>
+                            <li>89 species of fish</li>
+                            <li>03 families of amphibians</li>
+                            <li>30 species of butterflies, etc...</li>
+                        </ul>
+                    <p>The total number of animals varies from 2500-3000 due to breeding and free living colonies of birds. Dehiwala Zoo has become famous among the visitors<br>
+                        not only for collection of local and exotic animals but also for landscaping with lush greeneries.<br>
+                        The Zoo supports and promotes conservation by breeding certain rare and endangered species through proper animal welfare.<br>
+                        <i>P.S. Click the butterfly icon to go to our dedicated wildlife web page! Or you can just click <a href="wildlife.html">this</a>.</i>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="part">
+                <h2 class="part-title">About Sri Lanka</h2>
+                <div class="part-img"><img src="appimages/map.png" alt="A map of Ceylon!"></div>
+                <div class="part-content">
+                    <p>Sri Lanka, formerly known as Ceylon, and officially the Democratic Socialist Republic of Sri Lanka, is an island country in South Asia.<br>It is situated in the Indian Ocean, southwest of the Bay of Bengal.<br><br>
+                        Sri Lanka's documented history spans 3,000 years, with evidence of prehistoric human settlements dating back at least 125,000 years.<br>
+                        It has a rich cultural heritage, and the first known Buddhist writings of Sri Lanka,<br>
+                        <a href="https://en.wikipedia.org/wiki/P%C4%81li_Canon">the Pāli Canon</a>, date back to the Fourth Buddhist council in 29 BCE. During a period of great political crisis, Sri Lanka was colonised by :</p>
+                        <ol>
+                            <li>Portuguese</li>
+                            <li>Dutch</li>
+                            <li>British</li>
+                        </ol>
+                    <p>who later extended their control over the whole island, colonising it from 1815 to 1948.<br>
+                        A national movement for political independence arose in the early 20th century, and in 1948,<br>Ceylon became a republic and adopted its current name in 1972.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--------Ending of the section/div containers----------->
+
             <footer>
                 <nav id="footNav">
-                    By using our website, you are hereby abiding by our :
-                    <!--Link the Privacy Policy and User Agreement anchor tags to any legally-binding document-->
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">User Agreement</a></li>
-                    </ul>
+                    <p>
+                        By using our website, you are hereby abiding by our Privacy Policy and User Agreement.<br>
+                        All rights reserved by the Dehiwala Zoo &#169; .<br> <!--This is just to show how different symbols get evaluated in HTML, it is not legally registered in any way.-->
+                        This was brought to you by CB009351 : Shavintha.
+                    </p>
                 </nav>
             </footer>
     </body>
