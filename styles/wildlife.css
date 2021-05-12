@@ -37,7 +37,7 @@ a:visited{
 /*Our background image*/
 
 body {
-    background-image: url("//web-dev-cw/appimages/wildlife_bg_mobile.png");
+    background-image: url("/web-dev-cw/appimages/wildlife_bg_mobile.png");
     background-position: center center;
     /*Attaches our image to our viewport at all times*/
     background-attachment: fixed;
