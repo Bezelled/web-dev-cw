@@ -1,1 +1,78 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #3a3b49;
+}
 
+/*#header{
+    display: inline;
+    width: 50%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+#purchase{
+    font-size: 10px;
+}
+
+#donate{
+    font-size: 10px;
+}*/
+
+body {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    color: white;
+    background-color: #a4b1a6;
+}
+
+h2{
+    color: #FFF089;
+    text-shadow: -1px 1px 2px #000
+}
+
+p{
+    color: #fcee97;
+    font-weight: bold;
+}
+
+.half {
+    height: 80%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.left {
+    left: 0;
+    background-color: #f6f6d2;
+}
+  
+.right {
+    right: 0;
+    background-color: #9e9ff3;
+}
+  
+.left label{
+    color: #5052db;
+    font-weight: bold;
+}
+
+.right label{
+    color: #fcee97;
+    font-weight: bold;
+}
+
+.centre {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+  
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
