@@ -21,7 +21,7 @@
     <body>
         <div id="header">
             <h1 id="purchase">--------Purchases and donations</h1>
-            <!--<h1 id="donation">Donations--------</h1>-->
+            <!--]<h1 id="donation">Donations</h1>-->
         </div>
         <nav id="mainNav">
             <ul>
@@ -38,19 +38,19 @@
                 <div class="centre">
                 <form>
                     <label for="name">Full Name :</label>
-                    <p><input class="theForm" type="text" placeholder="Name" required name="name"></p>
+                    <p><input class="theForm" type="text" placeholder="Name" required name="name" id="name"></p>
                     <label for="adult">Local adults :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of adults" required name="adults"></p>
+                    <p><input class="theForm" type="number" placeholder="Number of adults" required name="adults" id="adult"></p>
                     <label for="child">Local children :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of children" name="children"></p>
+                    <p><input class="theForm" type="number" placeholder="Number of children" name="children" id="child"></p>
                     <label for="foreigner">Foreigners :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of foreigners" name="foreigners"></p>
+                    <p><input class="theForm" type="number" placeholder="Number of foreigners" name="foreigners" id="foreigner"></p>
                     <label for="phone">Phone number :</label>
-                    <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile"></p>
-                    <label for="date">Date of reservation :</label>
-                    <p><input class="theForm" type="datetime-local" placeholder="Date and time" required name="date" value="2021-05-13T16:00"></p>
+                    <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phone"></p>
+                    <label for="date">Date of booking :</label>
+                    <p><input class="theForm" type="datetime-local" required name="date" value="2021-05-13T16:00" id="date"></p>
                     <label for="notes">Further comments :</label>
-                    <p><textarea class="theForm" type="text" placeholder="Any special notes? Allergies, etc..." name="message"></textarea></p>
+                    <p><textarea class="theForm" placeholder="Any special notes? Allergies, etc..." name="message" id="notes"></textarea></p>
                     <p><button class="theForm" type="submit">Book tickets!</button></p>
                 </form>
                 </div>
@@ -66,15 +66,16 @@
                     <h2>Do you wish to donate?</h2>
                     <hr>
                     <form>
-                        <label for="name">Full Name :</label>
-                        <p><input class="formTwo" type="text" placeholder="Name" required name="Name"></p>
-                        <label for="phone">Mobile number :</label>
-                        <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile"></p>
-                        <label for="local">Address :</label>
-                        <p><textarea class="formTwo" type="number" placeholder="Address" name="children"></textarea></p>
-                        <label for="foreigner">Sum of money (Rs.):</label>
-                        <p><input type="cash" min="1" step="any" required name="money"></p>
-                        <button class="theForm" type="submit">Donate!</button></p>
+                        <label for="nameTwo">Full Name :</label>
+                        <p><input class="formTwo" type="text" placeholder="Name" required name="Name" id="nameTwo"></p>
+                        <label for="phoneTwo">Mobile number :</label>
+                        <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phoneTwo"></p>
+                        <label for="add">Address :</label>
+                        <p><textarea class="formTwo" placeholder="Address" name="children" id="add"></textarea></p>
+                        <label for="cash">Sum of money (Rs.):</label>
+                        <!--The user has to donate at least Rs.100-->
+                        <p><input type="number" min="100" step="any" required name="money" id="cash"></p>
+                        <p><button class="theForm" type="submit">Donate!</button></p>
                     </form>
                 </div>
             </div>
