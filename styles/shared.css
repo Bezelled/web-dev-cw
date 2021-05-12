@@ -15,7 +15,7 @@
 #mainNav li{
     flex-grow: 1;
     width: calc(25% - .2em);
-    border: .1em rgb(17, 17, 17) solid;
+    border: thin rgb(17, 17, 17) solid;
 }
 
 #mainNav li:hover{
