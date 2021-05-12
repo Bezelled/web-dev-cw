@@ -37,7 +37,7 @@ a:visited{
 /*Our background image*/
 
 body {
-    background-image: url("/web-dev-cw/appimages/wildlife_bg_mobile.png"); /*optimised pic for mobiles*/
+    background-image: url("//web-dev-cw/appimages/wildlife_bg_mobile.png");
     background-position: center center;
     /*Attaches our image to our viewport at all times*/
     background-attachment: fixed;
@@ -47,7 +47,34 @@ body {
     background-size: cover;
     /*In the rare occasion that the b/g image does not load, we can use a simple colour*/
     background-color: #DFACC4;
-   }
+}
+
+.flora img{
+    width:150px;
+    height:150px;
+}
+
+table, thead, td{
+    border: 3px solid #16721b;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 5px;
+}
+
+.bod{
+    color:#ffffff;
+    text-shadow: 1px 1px #632c5a;
+}
+
+h2, thead{
+    text-align: center;
+}
+
+#tfoot{
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
 
 @media only screen and (min-width: 800px){
     
@@ -56,10 +83,35 @@ body {
     }
 
     body{
-        background-image: url("/web-dev-cw/appimages/wildlife_bg_desktop.jpg"); /*optimised pic for desktops*/
+        background-image: url("/web-dev-cw/appimages/wildlife_bg_desktop.jpg");
     }
 
     a:hover{
         color: rgb(155, 82, 9);
+    }
+
+    h2{
+        margin: 40px;
+    }
+}
+
+@media only screen and (max-width: 800px){  /*It is easier to style the table for a mobile layout in a media query than doing mobile first in this approach*/
+    table thead {
+        display: none;
+    }
+    
+    table td {
+        display: flex;
+    }
+      
+    table td::before {
+        content: attr(label);
+        font-weight: bold;
+        width: 100px;
+        min-width: 100px;
+    }
+    
+    .name{
+        font-weight: bold;
     }
 }
