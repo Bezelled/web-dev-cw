@@ -1,6 +1,7 @@
 #mainNav{
     position: sticky;
     top: 0;
+    border: thin solid black;
 }
 
 #mainNav ul{
