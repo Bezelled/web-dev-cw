@@ -115,6 +115,6 @@ h2, thead{
         font-weight: bold;
     }
     
-    tfoot{
+    #tfoot{
         display: block;
 }
