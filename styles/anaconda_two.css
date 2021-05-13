@@ -1,0 +1,124 @@
+h1{
+    color: #FFECCB;
+    text-shadow: 2px 2px #9e9292;
+}
+
+#smallhead{
+    color:azure;
+    text-shadow: 2px 2px 5px green;
+    text-align: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+h2{
+    margin: 1em; /*Space out the h2 from h3*/
+}
+
+#snake-tongue{
+    transform: rotateZ(250deg);             /*To transform the Y on all types of browsers as a forked snake tongue*/
+    -webkit-transform: rotateZ(250deg);
+    -moz-transform: rotateZ(250deg);
+    -ms-transform: rotateZ(250deg);
+    -o-transform: rotateZ(250deg);
+    font-weight: bold;                  /*To make it more visible*/
+}
+
+/*Snake head inspired by http://jsfiddle.net/hashem/u78bQ/1/*/
+
+#snake-head {
+    width: 40px;
+    height: 40px;
+    background-color: #FFECCB;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border: 6px solid #34785B;
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    -ms-transform: rotateZ(90deg);
+    -o-transform: rotateX(90deg);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+#conda{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+   
+#conda span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    color: #1c2b12;
+    text-align: center;
+    font-size: 2em;
+}
+
+#conda:hover span:nth-child(odd){
+    transform: skewY(-15deg);
+}
+
+#conda:hover span:nth-child(even){
+    transform: skewY(15deg);
+}
+
+#conda span:nth-child(odd){
+    background-color: #34785B;
+}
+#conda span:nth-child(even){
+    background-color: #FFECCB;
+}
+
+body {
+    /*This gradient was generated using https://mycolor.space/gradient3*/
+    background-image: radial-gradient(circle, #d2b28b, #c4a783, #b79c7a, #aa9172, #9d866a, #968065, #90795f, #89735a, #876f56, #856b52, #83674f, #81634b);
+}
+
+#empty{                     /*Space out the anaconda from the flex box of information*/
+    margin: 50px;
+    padding: 50px;
+}
+
+/*Paragraph formatting using flexbox*/
+
+#snakeContainer{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box{
+    border: 2px solid #34785B;
+    font-weight: bold;
+    color: #37432D;
+    padding: 1em;
+    margin: 5%;
+    background-color: #FFECCB;
+}
+footer{
+    color:#070707;
+    background-color:#D4BB9D;
+    text-align:center;
+    border: 2px solid #504538;
+    margin: 2%;
+    font-weight: bold;
+}
+/*Desktop sized screen*/
+
+@media only screen and (min-width: 800px){
+
+    #snakeContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+}

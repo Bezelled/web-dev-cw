@@ -1,0 +1,157 @@
+/*This animation template was obtained from https://cssdeck.com/labs/snake*/
+
+h1{
+    color: #3f2914;
+    size:2em;
+}
+
+h2{
+    text-align: center;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    color: #614f3e;
+}
+
+h3{
+    visibility:hidden;
+}
+
+body{
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    background-image: url("/Users/msi gaming/Desktop/Test WDOS/appimages/anacondaOneBG.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#fff0db;
+}
+
+#snake-tongue{
+    position: absolute;
+    visibility: hidden;
+}
+
+#snake-head{
+    position: absolute;
+    visibility: hidden;
+}
+
+#snake-tongue{
+    transform: rotateZ(250deg);             /*To transform the Y on all types of browsers as a forked snake tongue*/
+    -webkit-transform: rotateZ(250deg);
+    -moz-transform: rotateZ(250deg);
+    -ms-transform: rotateZ(250deg);
+    -o-transform: rotateZ(250deg);
+    font-weight: bold;                  /*To make it more visible*/
+}
+
+/*Our individual snake circle styling starts here*/
+
+#conda span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left:30%;
+    background: #0d5007;
+    opacity: 0.5;
+    border-radius: 20px;
+    animation: snake 1s infinite ease-in-out;
+}
+  
+#conda span:nth-child(2){
+    left: 40%;
+    animation-delay: 0.2s;
+}
+  
+#conda span:nth-child(3){
+    left: 50%;
+    animation-delay: 0.4s;
+}
+  
+#conda span:nth-child(4){
+    left: 60%;
+    animation-delay: 0.6s;
+}
+
+#conda span:nth-child(5){
+    left: 70%;
+    animation-delay: 0.8s;
+}
+/*Styling our paragraphs to a beige colour palette*/
+
+#snakeContainer{
+    bottom: 50%;
+    text-align: center;
+    background-color: #fff0db;
+    margin-left:20%;
+    margin-right:20%;
+    font-family: 'Segoe UI', Helvetica, sans-serif;
+    line-height: 2em;
+    border: thin solid #d9b99b;
+}
+
+.box:nth-of-type(odd){
+    background-color: #eed9c4;
+}
+
+.box:nth-of-type(even){
+    background-color: #e4d5b7;
+}
+
+#conda, #snake-head, #snake-body{
+    margin: 30px;
+    padding: 30px;
+}
+
+/*An aesthetic approach to keep the footer held in centre with no borders*/
+
+footer{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    line-height: 2em;
+}
+/*Our animation*/
+@keyframes snake {
+    0% {opacity: 0.3; transform:translateY(0px); box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);}
+    50% {opacity: 1; transform: translateY(-10px); background:yellow;  box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);}
+    100% {opacity: 0.3; transform:translateY(0px); box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);}
+}
+
+@media only screen and (min-width: 800px){
+
+    #snake-tongue{
+        position: absolute;
+        left:43.5%;
+    }
+    
+    #snake-head{
+        position: absolute;
+        top:30%;
+    }
+
+    #snakeContainer{
+        margin-left:30%;
+        margin-right:30%;
+    }
+
+    #conda span{
+        left:46%;
+    }
+
+    #conda span:nth-child(2){
+        left: 48%;
+    }
+      
+    #conda span:nth-child(3){
+        left: 50%;
+    }
+      
+    #conda span:nth-child(4){
+        left: 52%;
+    }
+    
+    #conda span:nth-child(5){
+        left: 54%;
+    }
+}
