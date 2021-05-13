@@ -14,7 +14,7 @@ ul{
 }
 
 body{
-    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/contactUsBG.jpg");
+    background-image: url("/web-dev-cw/appimages/contactUsBG.jpg");
     background-size: 100%;  /*To show it properly on mobiles*/
     background-repeat: repeat-y;    /*To repeat vertically*/
 }
