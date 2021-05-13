@@ -6,8 +6,11 @@ h1{
 
 #head{
     text-align:center;
+}
+
+head, label{
     color: #433525;
-}    
+}
 
 ul{
     list-style-type:none;   /*To remove stray bullet points*/
@@ -38,7 +41,7 @@ input[type=text], input[type=tel], select, textarea {
   
 input[type=submit] {
     background-color: #d7a87a;
-    color: white;
+    color: whitesmoke;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
