@@ -1,6 +1,6 @@
 img{
     height: 100%;
-    width: 100%;
+    width:100%;
     object-fit: contain;
     margin:0;
     padding: 0;
@@ -37,7 +37,7 @@ a:visited{
 /*Our background image*/
 
 body {
-    background-image: url("/web-dev-cw/appimages/wildlife_bg_mobile.png");
+    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/wildlife_bg_mobile.png");
     background-position: center center;
     /*Attaches our image to our viewport at all times*/
     background-attachment: fixed;
@@ -58,7 +58,7 @@ table, thead, td{
     border: 3px solid #16721b;
     border-collapse: collapse;
     padding: 10px;
-    margin: 5px;
+    margin: 5%;
 }
 
 .bod{
@@ -70,10 +70,15 @@ h2, thead{
     text-align: center;
 }
 
-#tfoot{
+tfoot{
     text-align: center;
     padding: 5px;
     margin: 5px;
+}
+
+#hey{
+    justify-content: center;
+    text-align: center;
 }
 
 @media only screen and (min-width: 800px){
@@ -83,7 +88,7 @@ h2, thead{
     }
 
     body{
-        background-image: url("/web-dev-cw/appimages/wildlife_bg_desktop.jpg");
+        background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/wildlife_bg_desktop.jpg");
     }
 
     a:hover{
@@ -114,7 +119,8 @@ h2, thead{
     .name{
         font-weight: bold;
     }
-    
+
     #tfoot{
         display: block;
+    }
 }
