@@ -17,7 +17,7 @@ h3{
 
 body{
     font-family: 'Segoe UI', Helvetica, sans-serif;
-    background-image: url("/Users/msi gaming/Desktop/Test WDOS/appimages/anacondaOneBG.jpg");
+    background-image: url("../appimages/anacondaOneBG.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
