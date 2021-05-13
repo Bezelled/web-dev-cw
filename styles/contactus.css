@@ -6,19 +6,16 @@ h1{
 
 #head{
     text-align:center;
-}
-
-head, label{
     color: #433525;
-}
+}    
 
 ul{
     list-style-type:none;   /*To remove stray bullet points*/
 }
 
 body{
-    background-image: url("/web-dev-cw/appimages/contactUsBG.jpg");
-    background-size: 100%;  /*To show it properly on mobiles*/
+    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/contactUsBG.jpg");
+    background-size: cover;  /*To show it properly on mobiles*/
     background-repeat: repeat-y;    /*To repeat vertically*/
 }
 
@@ -41,7 +38,7 @@ input[type=text], input[type=tel], select, textarea {
   
 input[type=submit] {
     background-color: #d7a87a;
-    color: whitesmoke;
+    color: white;
     padding: 12px 20px;
     border: none;
     cursor: pointer;
@@ -62,12 +59,37 @@ input[type=submit]:hover {
     margin-top: 0;
 }
 
-img{
-    width:100%;
+#deer{
+    padding-top:1em;
+    height: 300px;
+    width:350px;
+    object-fit: cover;
 }
 
 hr{
     border: 1px dashed #553a1e;
+}
+
+iframe {
+    display: block;
+    border-style:none;
+    align-self: center !important;
+    overflow:hidden;
+    border: 0px;
+}
+
+.mapouter{
+    text-align:center;
+    height:200px;
+    width:350px;
+}
+
+.gmap_canvas{
+    overflow:hidden;
+    background:none!important;
+    align-self:center;
+    height:200px;
+    width:350px;
 }
 
 /*For desktops, show the image on the left and the form on the right*/
