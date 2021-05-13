@@ -1,23 +1,24 @@
 #mainNav{
     position: sticky;
-    top: 0;
+    top: 0%;
     border: thin solid black;
+    font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+    z-index:1;  /*Says that the nav bar should be the upper most element in the web page*/
 }
 
 #mainNav ul{
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
     background-color: #5fa778;
     flex-flow: row wrap;
+    justify-content: flex-end;
+    padding-left: 0px;
 }
 
 #mainNav li{
     flex-grow: 1;
-    /*width: calc(25% - .2em);*/
     width: 30%;
-    border: thin rgb(17, 17, 17) solid;
+    border-left: thin rgb(17, 17, 17) solid;    /*If we simply write border, they will overlap and the list items will look darker*/
 }
 
 #mainNav li:hover{
@@ -27,13 +28,30 @@
 #mainNav a{
     background-size: 40px auto;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 5px center;
     min-height: 50px;
     line-height: 50px;
     text-decoration: none;
     display: block;
     color: rgb(17, 17, 17);
     text-decoration: none;
+}
+
+ul, ol {
+    display: table;
+    margin: 0 auto;
+}
+
+/*To add bottom borders on the 1st three elements in the mobile nav bar so that it doesn't look like the green is merged*/
+
+#mainNav li:nth-of-type(1){
+    border-bottom: thin solid black;
+}
+#mainNav li:nth-of-type(2){
+    border-bottom: thin solid black;
+}
+#mainNav li:nth-of-type(3){
+    border-bottom: thin solid black;
 }
 
 /*All svg images were sourced from freesvg.org*/
@@ -68,9 +86,14 @@
     margin-left: 25px;
 }
 
+#mainNav li a{
+    background-size:50px;
+    align-self: center;
+}
+
 .navText{
     position: absolute;
-    top: -1200px;
+    visibility: hidden;   /*Hide the nav text if it's a mobile device/smaller screen*/
 }
 
 body {
@@ -78,66 +101,33 @@ body {
     background-color: seashell; /*to set the background colour of the page*/
 }
 
-/*For mobiles and tabs*/
-@media only screen and (max-width: 799px){
-
-    #header h1{
-        font-size: 0.7em;
-    }
-
-    h1{
-        font-size: 0.7em;
-    }
-
-    #mainNav a{
-        background-position: 5px center;
-        display: block;
-    }
-
-    #mainNav ul{
-        justify-content: flex-end;
-    }
-
-    /*Makes the nav bar scalable and fit the screen for mobile devices*/
-    #mainNav li{
-        width: 100px;
-        flex-grow: 1;
-    }
-
-    #mainNav li a{
-        background-size:50px;
-        align-self: center;
-    }
-
-    #navText{
-        display: inline;
-        text-align: left;
-        padding-left: 53px;
-        padding-top: 0;
-    }
-}
-
 /*For desktops*/
 @media only screen and (min-width: 800px){
-
-    #mainNav a{
-        background-position: 5px center;
-        display: block;
-    }
-
-    #mainNav ul{
-        justify-content: flex-end;
-    }
 
     #mainNav li{
         width: 100px;
         flex-grow: 0;
+        font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+        font-size: 1em;
+        text-align: center;
     }
 
-    #navText{
+    .navText{
+        visibility: visible;
+        position: relative;
+        top: 0px;
         display: inline;
-        text-align: left;
-        padding-left: 53px;
-        padding-top: 0;
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    #mainNav li:nth-of-type(1){     /*No need for the bottom borders in desktop mode*/
+        border-bottom: 0px;
+    }
+    #mainNav li:nth-of-type(2){
+        border-bottom: 0px;
+    }
+    #mainNav li:nth-of-type(3){
+        border-bottom: 0px;
     }
 }
