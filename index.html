@@ -29,7 +29,6 @@
     <body>
         <!--Wrapping the header and emblem in a div tag will make it easier for us to edit it and make adjustments-->
         <header>
-            <img src="appimages/SL_emblem.png" alt="National emblem of SL" id="headerImg"> <!--Sourced from https://en.wikipedia.org/wiki/Emblem_of_Sri_Lanka-->
             <h1>The Dehiwala Zoo : Home</h1>
         </header>
         <!--Using a 6 (even) element nav bar will make it possible to distribute the elements and make it easier to look cleaner-->
@@ -60,20 +59,27 @@
         </main>
         <hr>
 
-        <!------------------->
-
         <!--We're going to wrap each element in a div tag
             so it's easier for us to group them together
             and edit them all at once
 
-        --All of them shall share the same class,
+        All of them shall share the same class,
             so that we can edit one ==> edit all        -->
 
         <section>
             <div class="part">
                 <h2 class="part-title">About the Zoo</h2>
-                <!--Sourced from http://mirrorcitizen.dailymirror.lk/2018/10/02/childrens-zoo-day-at-dehiwela/-->
-                <div class="part-img"><img src="appimages/entrance.jpg" alt="Our zoo entrance!"></div>
+                <!--Sourced from http://mirrorcitizen.dailymirror.lk/2018/10/02/childrens-zoo-day-at-dehiwela/
+
+                We will display different pictures to the user depending on their screen resolution, the default is the one with no number at the end.-->
+
+                <div class="part-img">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="appimages/entrance.jpg">
+                        <source media="(min-width:465px)" srcset="appimages/entrance200.jpg">
+                        <img src="appimages/entrance400.jpg" alt="Our zoo entrance!">
+                    </picture>
+                </div>
                 <!--Cited from nationalzoo.gov.lk/zoo/-->
                 <div class="part-content">
                     <p>The Dehiwala National Zoo, which has a remarkable collection of exotic and indigenous fauna, is one of the oldest Zoos in Asia. The Zoo in Sri Lanka is widely known as Colombo Zoo all over the world.<br><br>
@@ -89,7 +95,13 @@
         <section>
             <div class="part">
                 <h2 class="part-title">About our wildlife</h2>
-                <div class="part-img"><img src="appimages/zebra.jpg" alt="Our zebra Marty!"></div>
+                <div class="part-img">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="appimages/zebra.jpg">
+                        <source media="(min-width:465px)" srcset="appimages/zebra200.jpg">
+                        <img src="appimages/zebra400.jpg" alt="Our zebra Marty!">
+                    </picture>
+                </div>
                 <!--Sourced from nationalzoo.gov.lk/zoo/-->
                 <div class="part-content">
                     <p>Currently, the Dehiwala Zoo houses :</p>
@@ -101,10 +113,11 @@
                             <li>03 families of amphibians</li>
                             <li>30 species of butterflies, etc...</li>
                         </ul>
-                    <p>The total number of animals varies from 2500-3000 due to breeding and free living colonies of birds. Dehiwala Zoo has become famous among the visitors<br>
-                        not only for collection of local and exotic animals but also for landscaping with lush greeneries.<br>
+                    <p>The total number of animals varies from 2500-3000 due to breeding and free living colonies of birds.<br>
+                        Dehiwala Zoo has become famous amongst visitors not only for collection of local and exotic animals<br>
+                        but also for landscaping with lush greeneries.<br>
                         The Zoo supports and promotes conservation by breeding certain rare and endangered species through proper animal welfare.<br>
-                        <i>P.S. Click the butterfly icon to go to our dedicated wildlife web page! Or you can just click <a href="wildlife.html">this</a>.</i>
+                        <i>P.S. Click the butterfly icon 🦋 to go to our dedicated wildlife web page! Or you can just click <a href="wildlife.html">this</a>.</i>
                     </p>
                 </div>
             </div>
@@ -113,12 +126,19 @@
         <section>
             <div class="part">
                 <h2 class="part-title">About Sri Lanka</h2>
-                <div class="part-img"><img src="appimages/map.png" alt="A map of Ceylon!"></div>
+                <div class="part-img">
+                    <picture>
+                        <source media="(min-width:650px)" srcset="appimages/map.png">
+                        <source media="(min-width:465px)" srcset="appimages/map200.jpg">
+                        <img src="appimages/map400.jpg" alt="A map of Ceylon!">
+                    </picture>
+                </div>
                 <div class="part-content">
                     <p>Sri Lanka, formerly known as Ceylon, and officially the Democratic Socialist Republic of Sri Lanka, is an island country in South Asia.<br>It is situated in the Indian Ocean, southwest of the Bay of Bengal.<br><br>
                         Sri Lanka's documented history spans 3,000 years, with evidence of prehistoric human settlements dating back at least 125,000 years.<br>
                         It has a rich cultural heritage, and the first known Buddhist writings of Sri Lanka,<br>
-                        <a href="https://en.wikipedia.org/wiki/P%C4%81li_Canon">the Pāli Canon</a>, date back to the Fourth Buddhist council in 29 BCE. During a period of great political crisis, Sri Lanka was colonised by :</p>
+                        <a href="https://en.wikipedia.org/wiki/P%C4%81li_Canon">the Pāli Canon</a>, date back to the Fourth Buddhist council in 29 BCE.<br>
+                        During a period of great political crisis, Sri Lanka was colonised by the :</p>
                         <ol>
                             <li>Portuguese</li>
                             <li>Dutch</li>
@@ -130,15 +150,16 @@
                 </div>
             </div>
         </section>
+        <hr>
 
-        <!--------Ending of the section/div containers----------->
+        <!--Ending of the section/div containers-->
 
             <footer>
                 <nav id="footNav">
                     <p>
                         By using our website, you are hereby abiding by our Privacy Policy and User Agreement.<br>
                         All rights reserved by the Dehiwala Zoo &#169; .<br> <!--This is just to show how different symbols get evaluated in HTML, it is not legally registered in any way.-->
-                        This was brought to you by CB009351 : Shavintha.
+                        This was brought to you by CB009351 : Shavintha from CF2111COM.
                     </p>
                 </nav>
             </footer>
