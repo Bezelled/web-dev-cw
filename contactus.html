@@ -19,7 +19,9 @@
         <link rel="stylesheet" href="styles/contactus.css">
     </head>
     <body>
-        <h1>Dehiwala Zoo : Contact Us</h1>
+        <header>
+            <h1>Contact Us--------</h1>
+        </header>
         <nav id="mainNav">
             <ul>
             <li><a href="index.html"></a><span class="navText">Home</span></li>
@@ -30,7 +32,51 @@
             <li><a href="contactus.html"></a><span class="navText">Contact Us</span></li>
             </ul>
         </nav>
+        <!--Sourced from https://www.srilankatravel-guide.com/attractions/dehiwala-zoo-colombo/-->
         <main>
+            <div class="contain">
+                <div id="head">
+                    <h2>Do you wish to get in touch with us?</h2>
+                    <p>
+                        📍 | We are located at :<br><br>
+                            Dehiwala Zoological Gardens<br>
+                            Anagarika Dharmapala Mawatha,<br>
+                            Dehiwala.<br><br>
+                            📞 | Talk to us on :
+                    </p>
+                    <ul>
+                        <li>General : <a href="tel:+94112712751">+94 112712751</a></li>
+                        <li>Fax : +94 112734542</li>
+                    </ul>
+                    <p>
+                        📧 | Email us at : <a href="mailto:zoosl@slt.lk">zoosl@slt.lk</a>
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="appimages/deer.jpg" alt="Our lovely deer!">
+                    </div>
+                    <div class="column">
+                        <form>
+                            <label for="name">Full name :</label>
+                            <input type="text" id="name" required name="fullname" placeholder="John Doe">
+                            <label for="mail">E-mail address :</label>
+                            <input type="text" id="mail" required name="email" placeholder="abc123@email.com">
+                            <label for="phone">Phone number :</label>
+                            <input type="tel" id="phone" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" name="mobile">
+                            <label for="country">Country :</label>
+                            <select id="country" name="country">
+                                <option value="lanka">Sri Lanka</option>
+                                <option value="india">India</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="msg">Message :</label>
+                            <textarea id="msg" name="message" required placeholder="Write us something here..."></textarea>
+                            <input type="submit" value="Send it!">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
             
