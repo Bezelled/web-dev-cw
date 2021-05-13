@@ -73,7 +73,8 @@ a:visited {
 #footNav{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-size: 1.2em;
-    color:lightpink;
+    color:#37432D;
+    font-weight: bold;
     list-style-type: none;
     background-color: #5fa778;
     text-align: center;
