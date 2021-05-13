@@ -1,22 +1,73 @@
+h1{
+    padding: 6%;
+    margin: 15%;
+    border: 3px solid #37432D;
+    background-color: #F5F2F0;
+    color: #37432D;
+    text-align: center;
+    font: caption;
+    font-size: 2em;
+}
+
 h2{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     margin: 0.5em 0;
+}
+
+body{
+    background-image: url("/Users/msi gaming/Desktop/Test WDOS/appimages/mainBG.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#F5F2F0;
 }
 
 section, p, li{
     font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
     line-height: 1.6;
 }
+
+a:link {
+    color: #2C6335;
+}
   
-.header h1 {
-    position: relative;
-    top: 5px;
+a:visited {
+    color: #5FA778;
 }
 
 #mainPic{
     max-width: 100%;
-    height: auto; /*To make the image responsive*/
+    height: auto;           /*To make the image responsive*/
     object-fit: contain;    /*To make it retain its aspect ratio but fit the screen*/
+}
+
+.part-content {
+    border: thin solid #37432D;
+    background-color:#F5F2F0;
+    color: #855103;
+    text-align: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.mainPoints{
+    border: thin solid #37432D;
+    background-color:#F5F2F0;
+    color: #855103;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    padding: 1em;
+}
+
+.part-title, h2{
+    padding: 1em;
+    margin-top:1.5em;
+    margin-bottom: 1.5em;
+    background: #D19C4C;
+    border: 3px solid #37432D;
+    text-align: center;
 }
 
 #footNav{
@@ -24,9 +75,9 @@ section, p, li{
     font-size: 1.2em;
     color:lightpink;
     list-style-type: none;
-    display: flex;
     background-color: #5fa778;
     text-align: center;
+    align-self: center;
 }
 
 #footNav li{
@@ -37,16 +88,24 @@ hr{
     border: 2px solid #9D5F38;
 }
 
+img{
+    width: 100%;
+}
+
 @media only screen and (min-width: 800px){
 
-    header img{
-        position: relative;
-        right: 20px;
-        top: 5px;
+    h1{
+        padding-bottom: 100px;  /*Just to make sure that the nav bar won't be seen at first by any browser*/
+        font-size: 4em;
+    }
+
+    header{
+        padding: 20px;
     }
 
     .part{
         overflow: auto;
+        padding: 1em;
     }
 
     .part-img {
@@ -62,11 +121,21 @@ hr{
 
     .part-content {
         margin-left: 400px;
+        padding:3em;
+    }
+
+    .mainPoints{
+        margin:3em;
+        padding:3em;
     }
 
     .part-title, h2{
         padding: 9px;
-        background: #D19C4C;
+        margin-top:1.5em;
+        margin-bottom: 1.5em;
     }
-        
+    
+    a:hover{
+        color:#FAB5BF;
+    }
 }
