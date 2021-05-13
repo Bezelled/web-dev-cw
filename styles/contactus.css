@@ -1,1 +1,88 @@
+/*This contact us template - for desktops was studied from https://www.w3schools.com/howto/howto_css_contact_section.asp*/
 
+h1{
+    color: #4b2904;
+}
+
+#head{
+    text-align:center;
+    color: #433525;
+}    
+
+ul{
+    list-style-type:none;   /*To remove stray bullet points*/
+}
+
+body{
+    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/contactUsBG.jpg");
+    background-size: 100%;  /*To show it properly on mobiles*/
+    background-repeat: repeat-y;    /*To repeat vertically*/
+}
+
+#subject{
+    height:170px;
+}
+
+*{
+    box-sizing: border-box; /*To set all elements to have a uniform border-box box sizing*/
+}
+
+input[type=text], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #be9872;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+input[type=submit] {
+    background-color: #d7a87a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+  
+
+input[type=submit]:hover {
+    background-color: #8a6948;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+}
+
+img{
+    width:100%;
+}
+
+/*For desktops, show the image on the left and the form on the right*/
+@media only screen and (min-width: 800px){
+
+    /*Two columns that float next to each other*/
+    .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+    }
+  
+    /* Clear the floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    body{
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+}
