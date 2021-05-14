@@ -1,3 +1,8 @@
+h1{
+    color: rgb(51, 1, 51);
+    text-align: center;
+}
+
 h2, h3{
     font-family: Helvetica, Tahoma, Verdana, sans-serif;
     margin: 0.5em 0;
@@ -5,19 +10,81 @@ h2, h3{
 
 section, p, li{
     font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #C58637;
+}
+
+legend{
+    font-weight: bold;
+    color: purple;
+}
+
+a:link{
+    color: rgb(158, 75, 158);
+}
+
+a:visited{
+    color: purple;
+}
+
+body{
+    background-color: beige;
+    background-image: url(../appimages/activitiesMainBG.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 fieldset{
-    border:2px solid #5fa778;
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;	
-    border-radius:8px;
+    border:3px solid #19853f;
+    border-radius: 25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
     min-width: 100%;
-    padding: -1px;
+    min-width: 0;
+    max-width: 80%;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    text-align: center;
+    background-image: url(../appimages/activitiesSubBG.jpg);
+    background-position: center center;
 }
 
 img{
-    height: 400px;
-    width: 400px;
+    height: 80%;
+    width: 80%;
     object-fit: cover;
+    border:thin solid black;
+}
+
+legend {
+    padding: 1%;
+    border:3px solid #19853f;
+    border-radius:15px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    margin-bottom: 30px;
+    text-align: left;
+    background-image: url(../appimages/activitiesSubBG.jpg);
+    background-position: center center;
+}
+
+@media only screen and (min-width: 800px){
+
+    h1{
+        position: relative;
+        right: 410px;
+    }
+
+    img{
+        height: 400px;
+        width: 400px;
+    }
+
+    a:hover{
+        color: rgb(80, 78, 192);
+    }
+
 }
