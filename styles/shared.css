@@ -107,7 +107,7 @@ body {
     #mainNav li{
         width: 100px;
         flex-grow: 0;
-        font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+        font-family: 'Segoe UI', 'Helvetica', 'Arial', sans-serif !important;
         font-size: 1em;
         text-align: center;
     }
@@ -119,6 +119,8 @@ body {
         display: inline;
         text-align: center;
         padding-top: 1em;
+        color: black !important;        /*We set these as important so that it won't be overriden by other styles in other pages*/
+        font-weight: normal !important;
     }
 
     #mainNav li:nth-of-type(1){     /*No need for the bottom borders in desktop mode*/
