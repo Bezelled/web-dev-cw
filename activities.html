@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="styles/activities.css">
     </head>
     <body>
-        <h1>Dehiwala Zoo : Activities</h1>
+        <h1>Activities--</h1>
         <nav id="mainNav">
             <ul>
             <li><a href="index.html"></a><span class="navText">Home</span></li>
@@ -31,34 +31,71 @@
             </ul>
         </nav>
         <main>
+            <!--We are going to use fieldsets to group each activity, and it's a valid approach as validated by
+            ws3schools validator service, and in general practice-->
             <fieldset>
             <legend><h2>Wondering what to do when you visit us?<br>Don't worry! The Zoo has a load of activities for you to partake in!</h2></legend>
                 <fieldset id="circus">
                     <legend><h3>Our elephant circus! 🐘🎪</h3></legend>
-                    <img src="appimages/circus.jpg" alt="Our elephant circus!"> <!--Sourced from https://www.youtube.com/watch?v=TP87EEuIxkI-->
+                    <!--Sourced from https://www.youtube.com/watch?v=TP87EEuIxkI-->
+                    <picture>
+                        <source media="(min-width:650px)" srcset="appimages/circus.jpg">
+                        <source media="(min-width:465px)" srcset="appimages/circus200.jpg">
+                        <img src="appimages/circus400.jpg" alt="Our elephant circus!">
+                    </picture>
                     <p>
-                        Raja and his family, brought to us by our sister zoo, the <a href="http://nationalzoo.gov.lk/elephantorphanage/">Pinnawala Elephant Orphanage</a>.
+                        Raja and his family, brought to us by our sister zoo,<br>
+                        the <a href="http://nationalzoo.gov.lk/elephantorphanage/">Pinnawala Elephant Orphanage</a>.<br>
+                        An elephant every Lankan is proud to say is theirs,<br>
+                        you wouldn't want to miss this captivating show!<br>
+                        Starts from 10-10:30AM, 1-1:30PM and ends at 4-4:30PM every weekday!<br>
+                        Tickets are priced at Rs. 100 for all.
                     </p>
                 </fieldset>
                 <fieldset id="chimp">
                         <legend><h3>Meet-A-Chimp! 🤝🐵</h3></legend>
-                        <img src="appimages/chimp.jpg" alt="Our chimp : Sanju!">    <!--Sourced from https://www.9news.com.au/national/chimpanzee-escapes-taronga-zoo-sydney-lets-itself-back-in/5d385c52-dfe3-4211-8251-2d0acf27fd8f-->
+                        <!--Sourced from https://www.9news.com.au/national/chimpanzee-escapes-taronga-zoo-sydney-lets-itself-back-in/5d385c52-dfe3-4211-8251-2d0acf27fd8f-->
+                        <picture>
+                            <source media="(min-width:650px)" srcset="appimages/chimp.jpg">
+                            <source media="(min-width:465px)" srcset="appimages/chimp200.jpg">
+                            <img src="appimages/chimp400.jpg" alt="Our chimp : Sanju!">
+                        </picture>
                         <p>
-                            Sanju was brought into the Zoo as a baby from the <a href="https://www.pretoriazoo.org/">South African Zoo</a> in 2009.<br>Since then, he's been one of our most beloved additions!
+                            Sanju was brought into the Zoo as a baby from the <a href="https://www.pretoriazoo.org/">South African Zoo</a> in 2009.<br>
+                            Since then, he's been one of our most beloved additions!<br>
+                            You can shake his hand at 11PM-6PM every day!<br>
+                            Best of all, it's free!<br>
                         </p>
                 </fieldset>
                 <fieldset id="dolphin">
                         <legend><h3>The dancing dolphins! 🩰🐬</h3></legend>
-                        <img src="appimages/dolphin.jpg" alt="Our dolphin show!">   <!--Sourced from https://commons.wikimedia.org/wiki/File:Dolphins_Zoo_Lisbon_(6).jpg-->
+                        <!--Sourced from https://commons.wikimedia.org/wiki/File:Dolphins_Zoo_Lisbon_(6).jpg-->
+                        <picture>
+                            <source media="(min-width:650px)" srcset="appimages/dolphin.jpg">
+                            <source media="(min-width:465px)" srcset="appimages/dolphin200.jpg">
+                            <img src="appimages/dolphin400.jpg" alt="Our dolphin show!">
+                        </picture>
                         <p>
-                            Caution : you might get a bit wet! Our well-trained majestic dolphins perform for us every day! There are two visiting times : 11-12PM and 2-3PM. 
+                            Caution : you might get a bit wet!<br>
+                            Our majestic dolphins perform elegantly for us every day!<br>
+                            There are two visiting times : 11-12PM and 2-3PM.<br>
+                            Tickets are priced at Rs.100 for children, Rs.200 for adults and Rs.500 for foreigners.
                         </p>
                 </fieldset>
                 <fieldset id="polly">
                         <legend><h3>Chat with Polly! 🗣🦜</h3></legend>
-                        <img src="appimages/polly.jpg" alt="Our chatterbox Polly!">     <!--Sourced from https://www.flickr.com/photos/yimhafiz/3273208937-->
+                        <!--Sourced from https://www.flickr.com/photos/yimhafiz/3273208937-->
+                        <picture>
+                            <source media="(min-width:650px)" srcset="appimages/polly.jpg">
+                            <source media="(min-width:465px)" srcset="appimages/polly200.jpg">
+                            <img src="appimages/polly400.jpg" alt="Our chatterbox Polly!">
+                        </picture>
                         <p>
-                            Our talkative little macaw.
+                            Our talkative little macaw.<br>
+                            This intuitive little bird learnt how to speak, as if it's straight out of a movie!<br>
+                            Of course, its vocabulary isn't as advanced as ours,<br>
+                            but our well-trained zoo keepers taught it to speak basic phrases!<br>
+                            Drop by and say hello anytime; there's no fee!<br>
                         </p>
                 </fieldset>
             </fieldset>
