@@ -14,7 +14,7 @@ ul{
 }
 
 body{
-    background-image: url("../appimages/contactUsBG.jpg");
+    background-image: url("/Users/msi gaming/Desktop/Test WDoS/appimages/contactUsBG.jpg");
     background-size: cover;  /*To show it properly on mobiles*/
     background-repeat: repeat-y;    /*To repeat vertically*/
 }
@@ -59,37 +59,12 @@ input[type=submit]:hover {
     margin-top: 0;
 }
 
-#deer{
-    padding-top:1em;
-    height: 300px;
-    width:350px;
-    object-fit: cover;
+img{
+    width:100%;
 }
 
 hr{
     border: 1px dashed #553a1e;
-}
-
-iframe {
-    display: block;
-    border-style:none;
-    align-self: center !important;
-    overflow:hidden;
-    border: 0px;
-}
-
-.mapouter{
-    text-align:center;
-    height:200px;
-    width:350px;
-}
-
-.gmap_canvas{
-    overflow:hidden;
-    background:none!important;
-    align-self:center;
-    height:200px;
-    width:350px;
 }
 
 /*For desktops, show the image on the left and the form on the right*/
