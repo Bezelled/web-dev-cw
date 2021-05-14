@@ -3,25 +3,8 @@ h1 {
     color: #3a3b49;
 }
 
-/*#header{
-    display: inline;
-    width: 50%;
-    height: 60px;
-    margin: 0;
-    padding: 0;
-}
-
-#purchase{
-    font-size: 10px;
-}
-
-#donate{
-    font-size: 10px;
-}*/
-
 body {
     font-family: Arial, Tahoma, Verdana, sans-serif;
-    color: white;
     background-color: #a4b1a6;
 }
 
@@ -35,25 +18,20 @@ p{
     font-weight: bold;
 }
 
-.half {
-    height: 80%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    padding-top: 20px;
+/*Show it in a normal flow for mobiles*/
+
+.left, .right, .centre{
+    text-align: center;
 }
-  
+
 .left {
-    left: 0;
     background-color: #f6f6d2;
 }
-  
+
 .right {
-    right: 0;
     background-color: #9e9ff3;
 }
-  
+
 .left label{
     color: #5052db;
     font-weight: bold;
@@ -64,15 +42,30 @@ p{
     font-weight: bold;
 }
 
-.centre {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-  
-.centered img {
-    width: 150px;
-    border-radius: 50%;
+/*For desktops, show it in split screen*/
+@media only screen and (min-width: 800px){
+
+    .half {
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        overflow-x: hidden;
+    }
+    
+    .left {
+        left: 0;
+    }
+    
+    .right {
+        right: 0;
+    }
+
+    .centre {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
 }
