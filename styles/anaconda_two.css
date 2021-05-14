@@ -48,7 +48,7 @@ h2{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none;  /*Hide the snake if it's a mobile device; can't animate it*/
     align-items: center;
 }
    
@@ -102,6 +102,7 @@ body {
     margin: 5%;
     background-color: #FFECCB;
 }
+
 footer{
     color:#070707;
     background-color:#D4BB9D;
@@ -119,6 +120,10 @@ footer{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-gap: 10px;
+    }
+    
+    #conda{
+        display:flex;   /*Show the snake if it's not a mobile*/
     }
 
 }
