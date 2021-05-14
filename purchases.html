@@ -20,8 +20,7 @@
     </head>
     <body>
         <div id="header">
-            <h1 id="purchase">--------Purchases and donations</h1>
-            <!--]<h1 id="donation">Donations</h1>-->
+            <h1>--------Purchases and donations</h1>
         </div>
         <nav id="mainNav">
             <ul>
@@ -34,25 +33,26 @@
             </ul>
         </nav>
         <main>
+            <!--We're creating a split screen effect on desktops, so we need appropriate div tags-->
             <div class="half left">
                 <div class="centre">
-                <form>
-                    <label for="name">Full Name :</label>
-                    <p><input class="theForm" type="text" placeholder="Name" required name="name" id="name"></p>
-                    <label for="adult">Local adults :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of adults" required name="adults" id="adult"></p>
-                    <label for="child">Local children :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of children" name="children" id="child"></p>
-                    <label for="foreigner">Foreigners :</label>
-                    <p><input class="theForm" type="number" placeholder="Number of foreigners" name="foreigners" id="foreigner"></p>
-                    <label for="phone">Phone number :</label>
-                    <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phone"></p>
-                    <label for="date">Date of booking :</label>
-                    <p><input class="theForm" type="datetime-local" required name="date" value="2021-05-13T16:00" id="date"></p>
-                    <label for="notes">Further comments :</label>
-                    <p><textarea class="theForm" placeholder="Any special notes? Allergies, etc..." name="message" id="notes"></textarea></p>
-                    <p><button class="theForm" type="submit">Book tickets!</button></p>
-                </form>
+                    <form>
+                        <label for="name">Full Name :</label>
+                        <p><input class="theForm" type="text" placeholder="Name" required name="name" id="name"></p>
+                        <label for="adult">Local adults :</label>
+                        <p><input class="theForm" type="number" placeholder="Number of adults" required name="adults" id="adult"></p>
+                        <label for="child">Local children :</label>
+                        <p><input class="theForm" type="number" placeholder="Number of children" name="children" id="child"></p>
+                        <label for="foreigner">Foreigners :</label>
+                        <p><input class="theForm" type="number" placeholder="Number of foreigners" name="foreigners" id="foreigner"></p>
+                        <label for="phone">Phone number :</label>
+                        <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phone"></p>
+                        <label for="date">Date of booking :</label>
+                        <p><input class="theForm" type="datetime-local" required name="date" value="2021-06-13T16:00" id="date"></p>
+                        <label for="notes">Further comments :</label>
+                        <p><textarea class="theForm" placeholder="Any special notes?" name="message" id="notes"></textarea></p>
+                        <p><button class="theForm" type="submit">Book tickets!</button></p>
+                    </form>
                 </div>
             </div>
             <div class="half right">
