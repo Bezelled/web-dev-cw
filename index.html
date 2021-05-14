@@ -42,8 +42,14 @@
                 <li><a href="contactus.html"></a><span class="navText">Contact Us</span></li>
             </ul>
         </nav>
-        <img src="appimages/elephant.jpg" alt="Our main elephant Raja" id="mainPic"> <!--Sourced from shutterstock.com-->
+        <!--Sourced from shutterstock.com-->
+        <picture>
+            <source media="(min-width:650px)" srcset="appimages/elephant.jpg">
+            <source media="(min-width:465px)" srcset="appimages/elephant200.jpg">
+            <img src="appimages/elephant400.jpg" alt="Our main elephant Raja!" id="mainPic">
+        </picture>
         <main>
+            <!--I wish to centre this part on desktops, so I'm using a different div tag-->
             <div class="mainPoints">
                 <p>
                 The Dehiwala Zoo is widely regarded as the main tourist attraction in Sri Lanka for flora and fauna.<br>
@@ -102,7 +108,7 @@
                         <img src="appimages/zebra400.jpg" alt="Our zebra Marty!">
                     </picture>
                 </div>
-                <!--Sourced from nationalzoo.gov.lk/zoo/-->
+                <!--Cited from nationalzoo.gov.lk/zoo/-->
                 <div class="part-content">
                     <p>Currently, the Dehiwala Zoo houses :</p>
                         <ul>
