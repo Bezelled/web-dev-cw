@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/shared.css">
         <link rel="stylesheet" href="styles/purchases.css">
+        <!--This is for the payment card icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id="header">
@@ -33,55 +35,143 @@
             </ul>
         </nav>
         <main>
-            <!--We're creating a split screen effect on desktops, so we need appropriate div tags-->
-            <div class="half left">
+
+            <div class="purchases">
                 <div class="centre">
-                    <form>
+                    <form id="purchaseForm">
+                        <h2>Please let us know :</h2>
+                        <h3>your ticket choice?</h3>
+                        <p>If you need tickets of multiple types; just select one Pass Type for now, then Add it to your Order and come back for more!</p>
+                        
+                        <div id="ticketChoice">
+                            <input type="radio" id="day" name="pass" value="Day Pass" checked>
+                            <label for="day">Day Pass</label><br><br>
+                            <input type="radio" id="student" name="pass" value="Student Pass">
+                            <label for="student">Student Pass</label><br><br>
+                            <input type="radio" id="foreigner" name="pass" value="Foreigner Pass">
+                            <label for="foreigner">Foreigner Pass</label><br>
+                        </div>
+
+                        <h3>the number of attendees?</h3>
+                        <label for="adult">Adults :</label>
+                        <input class="attendees" type="number" placeholder="Number of adults" min="0" max="100" name="adults" value="0" id="adult"><br><br>
+                        <label for="child">Children :</label>
+                        <input class="attendees" type="number" placeholder="Number of children" min="0" max="100" name="children" value="0" id="child"><br>
+
+                        <h3>the duration of your visit?</h3>
+                        <input class="duration" type="radio" id="threeHours" name="dur" value="Three Hours" checked>
+                        <label for="threeHours">3 hours</label><br><br>
+                        <input class="duration" type="radio" id="halfDay" name="dur" value="Half Day">
+                        <label for="halfDay">1/2 day</label><br><br>
+                        <input class="duration" type="radio" id="fullDay" name="dur" value="Full Day">
+                        <label for="fullDay">Full day</label><br><br>
+                        <input class="duration" type="radio" id="twoDays" name="dur" value="Two Days">
+                        <label for="twoDays">Two days</label><br><br>
+
+                        <h3>if you want any <i>optional</i> add-ons?</h3>
+                        <label for="annual">Annual Pass : </label>
+                        <input class="addOn" type="number" id="annual" placeholder="0" name="addon" min="0" max="100" value="0"><br><br>
+                        <label for="food">Food Token : </label>
+                        <input class="addOn" type="number" id="food" placeholder="0" name="addon" min="0" max="100" value="0"><br><br>
+
+                        <button type="button" id="addToOrder">Add to Order!</button><br><br>
+                        <p><b>You can also :</b><br><br>
+                        <button type="button" id="favourite">Favourite this Order!</button>
+                        <button type="button" id="orderFavourite">Order your Favourite!</button>
+                        <button type="button" id="loyalty">Check Loyalty Points!</button><br><br></p>
+
+                        <hr>
+
+                        <div class="shoppingCart">
+                            <h2>Shopping Cart 🛒</h2>
+                            <h3><u>Items added to your Cart</u></h3>
+                            <p id="cartTitle">Your Cart is empty!</p>
+                            <div class="currentItems">
+                                <p class="currentItems" id="passTypeC"></p>
+                                <p class="currentItems" id="adultTicketsC"></p>
+                                <p class="currentItems" id="childTicketsC"></p>
+                                <p class="currentItems" id="durationC"></p>
+                                <p class="currentItems" id="annualPassC"></p>
+                                <p class="currentItems" id="foodTokensC"></p>
+                            </div>
+                            <p id="current"></p>
+                            <p><b>Cost of the Current Order(s) : Rs.<span id="costCurrent">0</span></b></p>
+                            <p id="overall"></p>
+                            <div class="overallItems">
+                                <p class="overallItems" id="overallTicketTitle"></p>
+                                <p class="overallItems" id="overallTicket"></p>
+                            </div>
+                            <p><b>Cost of the Overall Order(s) : Rs.<span id="costOverall">0</span></b></p>
+                            <p id="costCalculation"></p>
+                        </div>
+                        <hr>
                         <label for="name">Full Name :</label>
                         <p><input class="theForm" type="text" placeholder="Name" required name="name" id="name"></p>
-                        <label for="adult">Local adults :</label>
-                        <p><input class="theForm" type="number" placeholder="Number of adults" required name="adults" id="adult"></p>
-                        <label for="child">Local children :</label>
-                        <p><input class="theForm" type="number" placeholder="Number of children" name="children" id="child"></p>
-                        <label for="foreigner">Foreigners :</label>
-                        <p><input class="theForm" type="number" placeholder="Number of foreigners" name="foreigners" id="foreigner"></p>
                         <label for="phone">Phone number :</label>
                         <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phone"></p>
                         <label for="date">Date of booking :</label>
                         <p><input class="theForm" type="datetime-local" required name="date" value="2021-06-13T16:00" id="date"></p>
                         <label for="notes">Further comments :</label>
                         <p><textarea class="theForm" placeholder="Any special notes?" name="message" id="notes"></textarea></p>
-                        <p><button class="theForm" type="submit">Book tickets!</button></p>
+                        <button class="theForm" type="submit" id="placeOrder">Place Order!</button>
                     </form>
                 </div>
             </div>
-            <div class="half right">
+
+            <div class="donations">
                 <div class="centre">
-                    <h2>Ticket prices</h2>
-                    <hr>
-                    <p>Local children - Rs.50</p>
-                    <p>Local adults - Rs.100</p>
-                    <p>Foreigners - Rs.1500</p>
-                    <hr>
-                    <h2>Do you wish to donate?</h2>
-                    <hr>
-                    <form>
+                    <h2 id="donateTitle">Do you wish to donate?</h2>
+                    <form id="donationForm">
                         <label for="nameTwo">Full Name :</label>
                         <p><input class="formTwo" type="text" placeholder="Name" required name="Name" id="nameTwo"></p>
                         <label for="phoneTwo">Mobile number :</label>
                         <p><input class="theForm" type="tel" placeholder="0123456789" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{1}" required name="mobile" id="phoneTwo"></p>
                         <label for="add">Address :</label>
                         <p><textarea class="formTwo" placeholder="Address" name="children" id="add"></textarea></p>
-                        <label for="cash">Sum of money (Rs.):</label>
-                        <!--The user has to donate at least Rs.100-->
-                        <p><input type="number" min="100" step="any" required name="money" id="cash"></p>
-                        <p><button class="theForm" type="submit">Donate!</button></p>
+
+                        <label for="donation">Sum of money (Rs.) :</label>
+                        <select id="donation" name="donation" required>
+                            <option value="">SELECT</option>
+                            <option value="1">100.00</option>
+                            <option value="2">250.00</option>
+                            <option value="3">500.00</option>
+                            <option value="4">1,000.00</option>
+                            <option value="5">2,500.00</option>
+                            <option value="6">5,000.00</option>
+                            <option value="7">10,000.00</option>
+                        </select>
+
+                        <div class="payment">
+                            <h3>Payment</h3>
+                            <h4>Accepted Cards</h4>
+                            <div class="icon-container">
+                              <i class="fa fa-cc-visa"></i>
+                              <i class="fa fa-cc-amex"></i>
+                              <i class="fa fa-cc-mastercard"></i>
+                              <i class="fa fa-cc-discover"></i>
+                            </div><br>
+                            <label for="cname">Name on Card :</label><br>
+                            <input type="text" id="cname" name="cardname" placeholder="John Doe" required><br><br>
+                            <label for="ccnum">Credit/Debit Card Number :</label><br>
+                            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required><br><br>
+                            <label for="expmonth">Expiry Month :</label><br>
+                            <input type="text" id="expmonth" name="expmonth" placeholder="September" required><br><br>
+                            <div class="row">
+                                <div class="left">
+                                    <label for="expyear">Expiry Year :</label><br>
+                                    <input type="text" id="expyear" name="expyear" placeholder="2021" required><br><br>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <label for="cvv">CVV :</label><br>
+                                <input type="text" id="cvv" name="cvv" placeholder="457" required><br><br>
+                            </div>
+                            <input type="submit" class="theForm" id="donate" name="donate" value="Donate!">
+                        </div>
                     </form>
                 </div>
             </div>
         </main>
-        <footer>
-            
-        </footer>
+        <script src="../scripts/purchases.js"></script>
     </body>
 </html>
