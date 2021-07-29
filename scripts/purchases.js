@@ -9,9 +9,7 @@ const btnFavourite = document.getElementById("favourite");
 const btnOrderFavourite = document.getElementById("orderFavourite");
 const btnLoyalty = document.getElementById("loyalty");
 const btnDonate = document.getElementById("donate");
-const txtCurrent = document.getElementById("current");
 const txtCostCurrent = document.getElementById("costCurrent");
-const txtOverall = document.getElementById("overall");
 const txtCostOverall = document.getElementById("costOverall");
 const radios = document.querySelectorAll("input[type=radio]");
 
@@ -37,12 +35,12 @@ const adultStudentPass = 500;
 const childStudentPass = 250;
 const adultForeignerPass = 5000;
 const childForeignerPass = 2500;
-//Adult 3 hrs and child 3 hrs – no additional charge
 const halfDayPrice = 250;
 const fullDayPrice = 500;
 const twoDaysPrice = 1000;
 const annualPassPrice = 5000;
 const foodTokenPrice = 500;
+//Initialise a constant Object called ticket, which has attributes that we can access & modify later for ease of use - a better approach to creating lots of variables
 const ticket = {
     passChoice : "",
     noOfAdults : 0,
@@ -55,6 +53,7 @@ const ticket = {
 };
 let costOverall = 0;
 
+//A function to get the selected radio button from a group of radio buttons
 function getSelectedRadioButton(name){
     let selectedChoice;
     let btnSelectedRadioChoice = document.getElementsByName(name);
@@ -66,6 +65,7 @@ function getSelectedRadioButton(name){
     return selectedChoice;
 }
 
+//Should be fired every time an element in the web page changes; so that all data is updated in real-time
 function updateOrder(){
     ticket.costCurrent = 0;
     ticket.passChoice = getSelectedRadioButton("pass");
@@ -77,6 +77,7 @@ function updateOrder(){
     retrievePrices();
 }
 
+//A function to calculate our prices
 function retrievePrices(){
     if ((ticket.noOfAdults>0) || (ticket.noOfChildren>0)){
         switch (ticket.passChoice){
@@ -108,6 +109,7 @@ function retrievePrices(){
     showCurrentOrder();
 }
 
+//Shows the current order by showing what the user has input (but not Added to Cart)
 function showCurrentOrder(){
     document.getElementById("cartTitle").innerText="";
     document.getElementById("passTypeC").innerText=`Your Ticket Type : ${ticket.passChoice}`;
@@ -119,18 +121,21 @@ function showCurrentOrder(){
     txtCostCurrent.innerText = ticket.costCurrent;
 }
 
+//A function to show the final order with the use of template literals 
 function showOverallOrder(){
     let extras;
     document.getElementById("overallTicketTitle").innerHTML="<b><u>Overall Order</u></b>";
-    ((ticket.annualPass + ticket.foodToken)==0) ? extras="" : extras=`Extras : Annual Pass(es) - ${ticket.annualPass}, Food Token(s) - ${ticket.foodToken}`;
+    //If there are any extras in the current order, add it to the String variable extras, else just say no extras were ordered
+    ((ticket.annualPass + ticket.foodToken)==0) ? extras="No extras ordered." : extras=`Extras : Annual Pass(es) - ${ticket.annualPass}, Food Token(s) - ${ticket.foodToken}`;
     document.getElementById("overallTicket").innerHTML+=`• ${ticket.passChoice} for ${ticket.noOfAdults} adult(s) and ${ticket.noOfChildren} child(ren) of duration : ${ticket.duration}.<br>${extras}<br><br>`;
+    //For each new order, show it on a new line in point form
     txtCostOverall.innerText = costOverall;
 }
 
 function addToOrder(){
     if (ticket.costCurrent!=0){
         costOverall += ticket.costCurrent;
-        document.getElementById("purchaseForm").reset();
+        document.getElementById("purchaseForm").reset();    //Reset the input form once the user Adds an Order to the Overall Order
         txtCostOverall.innerText = String(costOverall);
         showOverallOrder(); 
     } else{
@@ -144,8 +149,8 @@ function placeOrder(){
 }
 
 function addToFavourite(){
-    localStorage.favourite = JSON.stringify(ticket);  //Store our array in JSON string format in localStorage
-    alert("Success! Your Order is now your Favourite! ❤️");
+    localStorage.favourite = JSON.stringify(ticket);  //Store our Object in JSON string format in localStorage
+    alert("Success! Your Current Order is now your Favourite! ❤️");
 }
 
 function orderFavourite(){
@@ -153,7 +158,7 @@ function orderFavourite(){
         alert("You do not seem to have a Favourite Order! 😕\n You can make one by clicking \"Favourite this Order!\"");
     }
     else{
-        Object.assign(ticket, JSON.parse(localStorage.favourite));    //Retrieve our JSON format array stored in localStorage and parse it
+        Object.assign(ticket, JSON.parse(localStorage.favourite));    //Retrieve our JSON formatted Object in localStorage, parse it and assign its attributes to the ticket Object
         showCurrentOrder();
     }
 }
@@ -173,6 +178,7 @@ function checkLoyalty(){
 
 function newDonation(){
     let donationForm = document.getElementById("donationForm");
+    //If any field in the form that is required, is not filled, prompt the user to fill it out, without simply displaying the thank you
     for (let i=0; i<donationForm.elements.length; i++){
         if (donationForm.elements[i].value === '' && donationForm.elements[i].hasAttribute('required')){
             alert('Please fill out the necessary fields! 😕');
