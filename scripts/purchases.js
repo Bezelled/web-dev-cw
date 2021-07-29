@@ -139,11 +139,8 @@ function addToOrder(){
 }
 
 function placeOrder(){
-    txtCurrent.innerText = "";
-    txtOverall.innerText = "";
-    txtCostCurrent.innerText = "0";
-    txtCostOverall.innerText = "0";
     alert(`Thank you for your purchase!\n Brought to you by The Dehiwala Zoo with ❤️!`);
+    window.location.href = window.location.href;
 }
 
 function addToFavourite(){
