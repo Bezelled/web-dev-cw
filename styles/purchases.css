@@ -1,71 +1,114 @@
-h1 {
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    color: #3a3b49;
+/*Colouring the payment card icons*/
+.fa.ff-cc-visa{
+    color:navy;
+}
+
+.fa.fa-cc-amex{
+    color:blue;
+}
+
+.fa.fa-cc-mastercard{
+    color:red;
+}
+
+.fa.fa-cc-discover{
+    color:orange;
+}
+
+h1, #donateTitle{
+    color: whitesmoke;
+    text-shadow: 1px 1px 3px rebeccapurple;
+    -webkit-text-stroke: 0.5px rebeccapurple;
+}
+
+main{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 body {
-    font-family: Arial, Tahoma, Verdana, sans-serif;
-    background-color: #a4b1a6;
+	background: linear-gradient(to right, #5FA778,#5ba9d9,#5ba9d9, #7864c0);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
-h2{
-    color: #FFF089;
-    text-shadow: -1px 1px 2px #000
+@keyframes gradient {
+	0% {
+		background-position: 0% 70%;
+	}
+	50% {
+		background-position: 100% 70%;
+	}
+	100% {
+		background-position: 0% 70%;
+	}
 }
 
-p{
-    color: #fcee97;
-    font-weight: bold;
+form{
+    background-image: url("../appimages/purchases_mobile.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    border: 20px solid #7864c0;
+    background-color: whitesmoke;
 }
 
-/*Show it in a normal flow for mobiles*/
-
-.left, .right, .centre{
-    text-align: center;
+#purchaseForm{
+    border-top: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.left {
-    background-color: #f6f6d2;
+#donationForm{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.right {
-    background-color: #9e9ff3;
+hr{
+    border: 2px solid lightgrey;
+}
+  
+textarea, input[type=text], input[type=number], input[type=tel], input[type=datetime-local]{
+    border: 2px solid rgb(134, 44, 170);
+    border-radius: 3px;
 }
 
-.left label{
-    color: #5052db;
-    font-weight: bold;
+input[type=number]{
+    border: 2px solid rgb(134, 44, 170);
+    border-radius: 3px;
+}
+ 
+/*Button template taken from https://cssbuttons.app/buttons/18*/
+input[type=submit], button {
+    background-size: 300% 100%;
+    border-radius: 50px;
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: whitesmoke;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-image: linear-gradient( to right, #5FA778,#bd6394,#eb80e5, #7864c0);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
 }
 
-.right label{
-    color: #fcee97;
-    font-weight: bold;
+input[type=submit]:hover, button:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
-/*For desktops, show it in split screen*/
+/*For desktops*/
 @media only screen and (min-width: 800px){
-
-    .half {
-        height: 100%;
-        width: 50%;
-        position: absolute;
-        overflow-x: hidden;
+    form{
+        background-image: url("../appimages/purchases_web.png");
     }
-    
-    .left {
-        left: 0;
-    }
-    
-    .right {
-        right: 0;
-    }
-
-    .centre {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-
 }
