@@ -143,9 +143,22 @@ function addToOrder(){
     }
 }
 
+function validateFields(formName, successMessage){
+    let theForm = document.getElementById(formName);
+    //If any field in the form that is required, is not filled, prompt the user to fill it out, without simply displaying the thank you
+    for (let i=0; i<theForm.elements.length; i++){
+        if (theForm.elements[i].value === '' && theForm.elements[i].hasAttribute('required')){
+            console.log(theForm.elements[i].name);
+            alert('Please fill out the necessary fields! 😕');
+            return;
+        }
+    }
+    theForm.reset();
+    alert(successMessage);
+}
+
 function placeOrder(){
-    alert(`Thank you for your purchase!\n Brought to you by The Dehiwala Zoo with ❤️!`);
-    window.location.href = window.location.href;
+    validateFields("purchaseForm", "Thank you for your purchase!\n Brought to you by The Dehiwala Zoo with ❤️!");
 }
 
 function addToFavourite(){
@@ -177,14 +190,5 @@ function checkLoyalty(){
 }
 
 function newDonation(){
-    let donationForm = document.getElementById("donationForm");
-    //If any field in the form that is required, is not filled, prompt the user to fill it out, without simply displaying the thank you
-    for (let i=0; i<donationForm.elements.length; i++){
-        if (donationForm.elements[i].value === '' && donationForm.elements[i].hasAttribute('required')){
-            alert('Please fill out the necessary fields! 😕');
-            return;
-        }
-    }
-    donationForm.reset();
-    alert("Thank you for your donation! ❤️");
+    validateFields("donationForm", "Thank you for your donation! ❤️");
 }
