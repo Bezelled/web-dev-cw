@@ -148,7 +148,7 @@ function validateFields(formName, successMessage){
     //If any field in the form that is required, is not filled, prompt the user to fill it out, without simply displaying the thank you
     for (let i=0; i<theForm.elements.length; i++){
         if (theForm.elements[i].value === '' && theForm.elements[i].hasAttribute('required')){
-            alert('Please fill out the necessary fields! 😕');
+            alert(`Please fill out the necessary fields!\nThe ${theForm.elements[i].name} field is empty! 😕`);
             return;
         }
     }
